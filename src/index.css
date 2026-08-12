@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-prohealth: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  html, body {
+    font-family: var(--font-prohealth);
+    background: radial-gradient(circle at 85% 15%, #dbeafe 0%, #eff6ff 35%, #f8fafc 75%);
+    color: #0f172a;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Mobile Scrollbar Hide Utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Exact ProHealth Card & Panel System */
+.prohealth-panel {
+  background-color: #ffffff;
+  border: 1px solid rgba(219, 234, 254, 0.8);
+  border-radius: 1.75rem; /* 28px rounded corners */
+  box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.07), 0 4px 12px -2px rgba(0, 0, 0, 0.02);
+}
+
+.prohealth-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(219, 234, 254, 0.7);
+  border-radius: 1.5rem;
+}
+
+.prohealth-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.prohealth-card-hover:hover {
+  border-color: #60a5fa;
+  transform: translateY(-3px);
+  box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.15);
+}
+
+/* ProHealth Buttons */
+.btn-prohealth-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.35);
+  transition: all 0.2s ease-in-out;
+}
+.btn-prohealth-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.45);
+}
+
+.btn-prohealth-secondary {
+  background-color: #ffffff;
+  color: #1e293b;
+  font-weight: 700;
+  border: 1px solid #cbd5e1;
+  border-radius: 9999px;
+  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+.btn-prohealth-secondary:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+}
+
+/* ProHealth Status Tags */
+.tag-critical {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+  border-radius: 9999px;
+}
+
+.tag-warning {
+  background-color: #fffbe6;
+  color: #d97706;
+  border: 1px solid #fde047;
+  border-radius: 9999px;
+}
+
+.tag-normal {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #86efac;
+  border-radius: 9999px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #eff6ff;
+}
+::-webkit-scrollbar-thumb {
+  background: #bfdbfe;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #93c5fd;
+}
